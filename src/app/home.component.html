@@ -1,10 +1,30 @@
 
 <div>
-<mat-tab-group>
-  <mat-tab label="Edit"> Edit Mode </mat-tab>
-  <mat-tab label="View"> View Mode </mat-tab>
+
+<mat-tab-group dynamicHeight [(selectedIndex)]="activeTabIndex">
+	<mat-tab>
+		<ng-template mat-tab-label>Edit Mode</ng-template>
+		<div>
+			<h1>Edit Mode</h1>
+			<p></p>
+			<!-- <app-edit-mode></app-edit-mode> -->
+
+		</div>
+	</mat-tab>
+  
+	<mat-tab>
+		<ng-template mat-tab-label>View Mode</ng-template>
+		<div>
+			<h1>View Mode </h1>
+			<!-- <app-view-mode></app-view-mode> -->
+		</div>
+	</mat-tab>
+
 </mat-tab-group>
+
+
 </div>
 
-
+<div style='padding-top:300px;'>
 <div> {{this.inputString}} </div>
+</div>
