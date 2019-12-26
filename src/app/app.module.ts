@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { MatTabsModule } from '@angular/material';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, MatTabsModule],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent]
 })
