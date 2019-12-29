@@ -6,13 +6,9 @@ import {FormControl} from '@angular/forms';
   templateUrl: './edit-mode.component.html',
   styleUrls: ['./edit-mode.component.css']
 })
-export class EditModeComponent implements OnInit {
+export class EditModeComponent {
 
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

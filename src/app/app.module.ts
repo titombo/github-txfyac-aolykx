@@ -17,7 +17,7 @@ import {
   MatTabsModule
 } from '@angular/material';
 
-import {DemoMaterialModule} from './app/material-module';
+import {DemoMaterialModule} from './material-module';
 
 import {MatNativeDateModule} from '@angular/material/core';
 
