@@ -27,7 +27,8 @@ import {MatNativeDateModule} from '@angular/material/core';
   FormsModule, 
   HttpClientModule, 
   DemoMaterialModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  ReactiveFormsModule
   ],
   exports:[MatButtonModule,
   MatInputModule,
