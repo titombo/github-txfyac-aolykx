@@ -1,10 +1,12 @@
-<form class="example-form">
+<form class="example-form" [formGroup]='formName'>
+<div formArrayName="controllerArray" >
+	<mat-card class="example-card" *ngFor="let item of formName.controls.controllerArray.controls; let i=index" [formGroupName]="i">
 
-	<mat-card class="example-card">
+
 
 		<mat-card-header>
 			<div mat-card-avatar class="example-header-image"></div>
-			<mat-card-title>Link 1</mat-card-title>
+			<mat-card-title>Link 0</mat-card-title>
 			<mat-card-subtitle></mat-card-subtitle>
 		</mat-card-header>
 
@@ -13,13 +15,13 @@
 
 			<mat-form-field class="example-full-width">
 				<mat-label>Link Name</mat-label>
-				<input matInput placeholder="Ex. Material 1" #box (keyup)="0" value="">
+				<input matInput placeholder="Ex. Material with link" formControlName="linkName" #box (keyup)="0" value="">
       </mat-form-field>
 				<br>
 
 				<mat-form-field class="example-full-width">
 					<mat-label>Link</mat-label>
-					<input matInput placeholder="Ex. https://emaua.com" #box2 (keyup)="0" value="">
+					<input matInput placeholder="Ex. https://emaua.com"  formControlName="linkAddress" #box2 (keyup)="0" value="">
       </mat-form-field>
 					<br>
 
@@ -29,7 +31,9 @@
 		</mat-card-content>
 
 	</mat-card>
+  
 
-	<button mat-button>Add New Link</button>
+</div>
+	<button mat-button (click)='addInput()'>Add New Link</button>
 
 </form>
