@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewModeComponent implements OnInit {
 
+links = [{
+    text: "Test",
+    link: "https://emaua.com"
+  }]
+
   constructor() { }
 
   ngOnInit() {
