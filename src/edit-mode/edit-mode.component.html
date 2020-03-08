@@ -6,8 +6,10 @@
 
 		<mat-card-header>
 			<div mat-card-avatar class="example-header-image"></div>
-			<mat-card-title>Link 0</mat-card-title>
+			<mat-card-title>Link {{i}}</mat-card-title>
 			<mat-card-subtitle></mat-card-subtitle>
+      <button mat-button (click)='removeInput(i)'>Remove</button>
+
 		</mat-card-header>
 
 
@@ -29,6 +31,8 @@
 						<a href='{{box2.value}}'> {{box.value}} </a>
 					</p>
 		</mat-card-content>
+
+  
 
 	</mat-card>
   
