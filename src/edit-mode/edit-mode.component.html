@@ -1,24 +1,36 @@
 <form class="example-form">
-  <!-- <mat-form-field class="example-full-width">
-    <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of options" [value]="option">
-        {{option}}
-      </mat-option>
-    </mat-autocomplete>
-  
-   
-  </mat-form-field> -->
- <mat-form-field class="example-full-width">
-    <mat-label>Link Name</mat-label>
-    <input matInput placeholder="Ex. Material 1" value="">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>Link</mat-label>
-    <input matInput placeholder="Ex. https://emaua.com" value="">
-  </mat-form-field>
-  <br>
-  <button mat-button>Add New Link</button>
+
+	<mat-card class="example-card">
+
+		<mat-card-header>
+			<div mat-card-avatar class="example-header-image"></div>
+			<mat-card-title>Link 1</mat-card-title>
+			<mat-card-subtitle></mat-card-subtitle>
+		</mat-card-header>
+
+
+		<mat-card-content>
+
+			<mat-form-field class="example-full-width">
+				<mat-label>Link Name</mat-label>
+				<input matInput placeholder="Ex. Material 1" #box (keyup)="0" value="">
+      </mat-form-field>
+				<br>
+
+				<mat-form-field class="example-full-width">
+					<mat-label>Link</mat-label>
+					<input matInput placeholder="Ex. https://emaua.com" #box2 (keyup)="0" value="">
+      </mat-form-field>
+					<br>
+
+					<p> <span style='font-weight: 900;'> Final Link: </span>
+
+						<a href='{{box2.value}}'> {{box.value}} </a>
+					</p>
+		</mat-card-content>
+
+	</mat-card>
+
+	<button mat-button>Add New Link</button>
 
 </form>

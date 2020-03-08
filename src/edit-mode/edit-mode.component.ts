@@ -9,6 +9,9 @@ import {FormControl} from '@angular/forms';
 export class EditModeComponent {
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  links = [{
+    text: "Test",
+    link: "https://emaua.com"
+  }]
 
 }
