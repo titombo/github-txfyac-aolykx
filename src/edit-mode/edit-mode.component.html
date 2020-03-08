@@ -1,10 +1,24 @@
 <form class="example-form">
-  <mat-form-field class="example-full-width">
+  <!-- <mat-form-field class="example-full-width">
     <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let option of options" [value]="option">
         {{option}}
       </mat-option>
     </mat-autocomplete>
+  
+   
+  </mat-form-field> -->
+ <mat-form-field class="example-full-width">
+    <mat-label>Link Name</mat-label>
+    <input matInput placeholder="Ex. Material 1" value="">
   </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Link</mat-label>
+    <input matInput placeholder="Ex. https://emaua.com" value="">
+  </mat-form-field>
+  <br>
+  <button mat-button>Add New Link</button>
+
 </form>
