@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../app/services/index';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-view-mode',
@@ -7,10 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewModeComponent implements OnInit {
 
-links = [{
-    text: "Test",
-    link: "https://emaua.com"
-  }]
+    subscription: Subscription;
+    messages: any[] = [];
 
   simpleLinks: string[] = [
     'https://angular.io/',
@@ -18,8 +18,16 @@ links = [{
     'https://reactjs.org/'
   ]
   
-  constructor() {
-
+  constructor(private messageService: MessageService) {
+ this.subscription = this.messageService.getMessage().subscribe(message => {
+          debugger;
+          if (message) {
+            this.messages.push(message);
+          } else {
+            // clear messages when empty message received
+            this.messages = [];
+          }
+        });
     
    }
 

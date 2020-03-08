@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { MessageService } from '../app/services/index';
 
 @Component({
   selector: 'app-edit-mode',
@@ -16,6 +17,11 @@ export class EditModeComponent {
   }]
 
   arrayInputs = [{linkName : ['a',Validators.required], linkAddress:"https://www.emaua.com"}];
+
+ sendMessage(): void {
+        // send message to subscribers via observable subject
+        this.messageService.sendMessage((this.formName.get('controllerArray') as FormArray));
+    }
 
 setArrayInputs(arrayInputs) {
     const arrayFG = arrayInputs.map(address => this.fb.group(address));
@@ -35,5 +41,6 @@ formName =this.fb.group({
     controllerArray: this.fb.array([])
   })  
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, 
+  private messageService: MessageService) { }
 }

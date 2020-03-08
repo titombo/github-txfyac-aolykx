@@ -8,6 +8,7 @@ import { of, Observable } from 'rxjs';
   templateUrl: './home.component.html',
   styles: [`h1 { font-family: Lato; }`]
 })
+
 export class HelloComponent implements OnInit {
   @Input() name: string;
 
@@ -20,7 +21,6 @@ export class HelloComponent implements OnInit {
           console.log(data);
           this.inputString = JSON.stringify(data);
       });
-
   }
 
   getDatas():Observable<any>{
