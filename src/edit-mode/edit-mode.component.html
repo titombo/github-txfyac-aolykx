@@ -28,14 +28,18 @@
       <br>
       <mat-form-field  class="example-full-width">
         	<mat-label>Link Description</mat-label>
-          <textarea matInput placeholder="Link Description"></textarea>
+          <textarea matInput placeholder="Link Description" formControlName="linkDescription" #box3 ></textarea>
       </mat-form-field>
 
 					<br>
 
 					<p> <span style='font-weight: 900;'> Final Link: </span>
 						<a href='{{box2.value}}'> {{box.value}} </a>
+          
 					</p>
+          <p>
+                <span> {{box3.value}} </span>
+          </p>
 		</mat-card-content>
 
   

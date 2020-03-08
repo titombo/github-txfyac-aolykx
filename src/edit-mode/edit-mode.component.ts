@@ -16,7 +16,7 @@ export class EditModeComponent {
     link: "https://emaua.com"
   }]
 
-  arrayInputs = [{linkName : ['a',Validators.required], linkAddress:"https://www.emaua.com"}];
+  arrayInputs = [{linkName : '', linkAddress:'',  linkDescription:'' }];
 
  sendMessage(): void {
         // send message to subscribers via observable subject
@@ -31,8 +31,12 @@ setArrayInputs(arrayInputs) {
 
 ngOnInit() { this.setArrayInputs(this.arrayInputs) }
 
-addInput() {(this.formName.get('controllerArray') as FormArray).push(this.fb.group({linkName:'a', linkAddress:"https://www.emaua.com"}
-
+addInput() {
+  
+  (this.formName.get('controllerArray') as FormArray).push(this.fb.group({
+  linkName:'', 
+  linkAddress:'',
+  linkDescription:''}
 )) }
 
 removeInput(index) { this.formName.controls.controllerArray["controls"].splice(index,1) }

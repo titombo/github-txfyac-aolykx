@@ -18,11 +18,14 @@ export class ViewModeComponent implements OnInit {
     'https://reactjs.org/'
   ]
   
+  complexLinks: any[] = [];
   constructor(private messageService: MessageService) {
  this.subscription = this.messageService.getMessage().subscribe(message => {
           debugger;
           if (message) {
             this.messages.push(message);
+
+            this.complexLinks = message.text.value;
           } else {
             // clear messages when empty message received
             this.messages = [];
