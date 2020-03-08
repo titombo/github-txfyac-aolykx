@@ -12,7 +12,16 @@ links = [{
     link: "https://emaua.com"
   }]
 
-  constructor() { }
+  simpleLinks: string[] = [
+    'https://angular.io/',
+    'https://material.angular.io/',
+    'https://reactjs.org/'
+  ]
+  
+  constructor() {
+
+    
+   }
 
   ngOnInit() {
   }

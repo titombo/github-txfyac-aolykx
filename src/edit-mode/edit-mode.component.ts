@@ -15,7 +15,7 @@ export class EditModeComponent {
     link: "https://emaua.com"
   }]
 
-  arrayInputs = [{linkName : ['a',Validators.required], linkAddress:"https://www.emaua.com"}, {linkName : ['a',Validators.required], linkAddress: "https://www.emaua.com"}];
+  arrayInputs = [{linkName : ['a',Validators.required], linkAddress:"https://www.emaua.com"}];
 
 setArrayInputs(arrayInputs) {
     const arrayFG = arrayInputs.map(address => this.fb.group(address));

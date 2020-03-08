@@ -6,7 +6,7 @@
 
 		<mat-card-header>
 			<div mat-card-avatar class="example-header-image"></div>
-			<mat-card-title>Link {{i}}</mat-card-title>
+			<mat-card-title>Link {{i+1}}</mat-card-title>
 			<mat-card-subtitle></mat-card-subtitle>
       <button mat-button (click)='removeInput(i)'>Remove</button>
 
@@ -25,6 +25,12 @@
 					<mat-label>Link</mat-label>
 					<input matInput placeholder="Ex. https://emaua.com"  formControlName="linkAddress" #box2 (keyup)="0" value="">
       </mat-form-field>
+      <br>
+      <mat-form-field  class="example-full-width">
+        	<mat-label>Link Description</mat-label>
+          <textarea matInput placeholder="Link Description"></textarea>
+      </mat-form-field>
+
 					<br>
 
 					<p> <span style='font-weight: 900;'> Final Link: </span>
