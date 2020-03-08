@@ -1,15 +1,15 @@
- <h3>Helper links</h3>
-  <mat-divider></mat-divider>
-  <mat-nav-list style='padding-left:20px;' >
-    <a mat-list-item [href]="link"
-      class="example-user-input"
-      matTooltip="Info about the action"
-      [matTooltipPosition]="right"
-       
-      color="primary"
-        matBadge="{{i+1}}" matBadgePosition="before" matBadgeColor="accent"
-       target="_blank"
-       *ngFor="let link of simpleLinks; let i = index"> {{ link }} </a>
-  </mat-nav-list>
-  <mat-divider></mat-divider>
-
+<h3>Helper links</h3>
+<mat-divider></mat-divider>
+<mat-nav-list style='padding-left:20px;'>
+	<a mat-list-item [href]="link" 
+    class="example-user-input" 
+    matTooltip="Description 1 2 3 4 5"
+    matTooltipClass="tooltip"
+		matTooltipPosition="below" 
+    color="primary" 
+    matBadge="{{i+1}}" 
+    matBadgePosition="before" matBadgeColor="accent"
+		target="_blank" 
+    *ngFor="let link of simpleLinks; let i = index"> {{ link }} </a>
+</mat-nav-list>
+<mat-divider></mat-divider>
