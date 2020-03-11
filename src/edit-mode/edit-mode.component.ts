@@ -10,6 +10,7 @@ import { MessageService } from '../app/services/index';
 })
 export class EditModeComponent {
 
+
   myControl = new FormControl();
   links = [{
     text: "Test",
@@ -33,9 +34,13 @@ ngOnInit() { this.setArrayInputs(this.arrayInputs) }
 
 addInput() {
   
+
+  const reg = 'https?://.+';
+
+
   (this.formName.get('controllerArray') as FormArray).push(this.fb.group({
   linkName:'', 
-  linkAddress:'',
+  linkAddress:['http://', [Validators.required, Validators.pattern(reg)]],
   linkDescription:''}
 )) }
 

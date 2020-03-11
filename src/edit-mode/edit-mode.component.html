@@ -23,7 +23,8 @@
 
 				<mat-form-field class="example-full-width">
 					<mat-label>Link</mat-label>
-					<input matInput placeholder="Ex. https://emaua.com"  formControlName="linkAddress" #box2 (keyup)="0" value="">
+					<input matInput placeholder="Ex. https://emaua.com"  formControlName="linkAddress" ngModel  type="url"
+          pattern="https?://.+"   #box2 (keyup)="0" value="http://" required>
       </mat-form-field>
       <br>
       <mat-form-field  class="example-full-width">
