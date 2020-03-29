@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { FormBuilder, Validators, FormArray } from '@angular/forms';
 import { MessageService } from '../app/services/index';
@@ -10,6 +10,17 @@ import { MessageService } from '../app/services/index';
 })
 export class EditModeComponent {
 
+
+ @HostListener('window:message', ['$event'])
+  onMessage(e) {
+    debugger;
+    if (e.origin != "http://localhost:4200") {
+      return false;
+    }
+    if (e.data.for == "user") {
+      alert('here i am');
+    }
+  }
 
   myControl = new FormControl();
   links = [{
