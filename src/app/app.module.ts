@@ -10,6 +10,9 @@ import {EditModeComponent} from './../edit-mode/edit-mode.component.ts';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 import {ViewModeComponent} from './../view-mode/view-mode.component.ts';
+
+import {VideoComponent} from './../video/video.component.ts';
+
 // import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { CommonModule } from '@angular/common';
 import { 
@@ -39,7 +42,7 @@ import {MatNativeDateModule} from '@angular/material/core';
   MatCardModule,
   MatToolbarModule,
   MatTabsModule],
-  declarations: [AppComponent, HelloComponent, EditModeComponent, ViewModeComponent],
+  declarations: [AppComponent, HelloComponent, EditModeComponent, ViewModeComponent, VideoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
