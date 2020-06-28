@@ -13,8 +13,7 @@ import {ViewModeComponent} from './../view-mode/view-mode.component.ts';
 
 import {VideoComponent} from './../video/video.component.ts';
 
-import { AngularMaterialModule } from '../angular-material/angular-material.module';
-
+// import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { CommonModule } from '@angular/common';
 import { 
   MatButtonModule,
