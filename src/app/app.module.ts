@@ -5,8 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import {EditModeComponent} from './../edit-mode/edit-mode.component.ts'
-import {ViewModeComponent} from './../view-mode/view-mode.component.ts'
+import {EditModeComponent} from './../edit-mode/edit-mode.component.ts';
+
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
+import {ViewModeComponent} from './../view-mode/view-mode.component.ts';
 // import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { CommonModule } from '@angular/common';
 import { 
@@ -28,7 +31,8 @@ import {MatNativeDateModule} from '@angular/material/core';
   HttpClientModule, 
   DemoMaterialModule,
   MatNativeDateModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  NgxYoutubePlayerModule.forRoot()
   ],
   exports:[MatButtonModule,
   MatInputModule,
